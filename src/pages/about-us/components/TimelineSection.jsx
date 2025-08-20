@@ -84,7 +84,7 @@ const TimelineSection = () => {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-muted/20">
+    <section className="relative bg-gradient-to-br from-blue-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
