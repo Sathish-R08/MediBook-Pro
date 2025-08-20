@@ -72,7 +72,7 @@ const AboutUs = () => {
                     <Icon name="Heart" size={24} color="white" strokeWidth={2.5} />
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-xl font-semibold tracking-tight">
+                    <span className="text-xl font-semibold tracking-tight dark:text-white text-gray-800">
                       MediBook Pro
                     </span>
                     <span className="text-xs text-primary font-medium -mt-1">
@@ -80,23 +80,23 @@ const AboutUs = () => {
                     </span>
                   </div>
                 </div>
-                <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
-                  Revolutionizing healthcare access through innovative technology, 
-                  connecting patients with verified healthcare providers for seamless, 
+                <p className="leading-relaxed mb-6 max-w-md text-gray-700 dark:text-gray-300">
+                  Revolutionizing healthcare access through innovative technology,
+                  connecting patients with verified healthcare providers for seamless,
                   secure appointment booking experiences.
                 </p>
                 <div className="flex space-x-4">
-                  <button className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-smooth">
+                  <button className="w-10 h-10 bg-gray-200 dark:bg-white/10 rounded-lg flex items-center justify-center hover:bg-gray-300 dark:hover:bg-white/20 transition-smooth">
                     <Icon name="Facebook" size={20} />
                   </button>
-                  <button className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-smooth">
+                  <button className="w-10 h-10 bg-gray-200 dark:bg-white/10 rounded-lg flex items-center justify-center hover:bg-gray-300 dark:hover:bg-white/20 transition-smooth">
                     <Icon name="Twitter" size={20} />
                   </button>
                   <a
                     href="https://linkedin.com/in/thesathishr383"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-all duration-300 cursor-pointer"
+                    className="w-10 h-10 bg-gray-200 dark:bg-white/10 rounded-lg flex items-center justify-center hover:bg-gray-300 dark:hover:bg-white/20 transition-all duration-300 cursor-pointer"
                   >
                     <Icon name="Linkedin" size={20} />
                   </a>
@@ -104,7 +104,7 @@ const AboutUs = () => {
                     href="https://www.instagram.com/sathishh555/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-all duration-300 cursor-pointer"
+                    className="w-10 h-10 bg-gray-200 dark:bg-white/10 rounded-lg flex items-center justify-center hover:bg-gray-300 dark:hover:bg-white/20 transition-all duration-300 cursor-pointer"
                   >
                     <Icon name="Instagram" size={20} />
                   </a>
@@ -113,28 +113,28 @@ const AboutUs = () => {
 
               {/* Quick Links */}
               <div>
-                <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
+                <h4 className="text-lg font-semibold mb-6 text-gray-800 dark:text-white">Quick Links</h4>
                 <ul className="space-y-3">
                   <li>
-                    <a href="/homepage" className="text-gray-300 hover:text-white transition-smooth flex items-center gap-2">
+                    <a href="/homepage" className="text-gray-700 dark:text-gray-300 hover:text-primary transition-smooth flex items-center gap-2">
                       <Icon name="Home" size={16} />
                       Home
                     </a>
                   </li>
                   <li>
-                    <a href="/doctor-listing" className="text-gray-300 hover:text-white transition-smooth flex items-center gap-2">
+                    <a href="/doctor-listing" className="text-gray-700 dark:text-gray-300 hover:text-primary transition-smooth flex items-center gap-2">
                       <Icon name="UserCheck" size={16} />
                       Find Doctors
                     </a>
                   </li>
                   <li>
-                    <a href="/appointment-booking" className="text-gray-300 hover:text-white transition-smooth flex items-center gap-2">
+                    <a href="/appointment-booking" className="text-gray-700 dark:text-gray-300 hover:text-primary transition-smooth flex items-center gap-2">
                       <Icon name="Calendar" size={16} />
                       Book Appointment
                     </a>
                   </li>
                   <li>
-                    <a href="/contact" className="text-gray-300 hover:text-white transition-smooth flex items-center gap-2">
+                    <a href="/contact" className="text-gray-700 dark:text-gray-300 hover:text-primary transition-smooth flex items-center gap-2">
                       <Icon name="Phone" size={16} />
                       Contact Us
                     </a>
@@ -144,41 +144,41 @@ const AboutUs = () => {
 
               {/* Contact Info */}
               <div>
-                <h4 className="text-lg font-semibold mb-6">Contact Info</h4>
+                <h4 className="text-lg font-semibold mb-6 text-gray-800 dark:text-white">Contact Info</h4>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <Icon name="MapPin" size={16} className="text-primary mt-1 flex-shrink-0" />
-                    <div className="text-gray-300 text-sm">
+                    <div className="text-gray-700 dark:text-gray-300 text-sm">
                       123 Healthcare Plaza, Suite 500<br />
                       Tamil Nadu, India
                     </div>
                   </li>
                   <li className="flex items-center gap-3">
                     <Icon name="Phone" size={16} className="text-primary flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
+                    <span className="text-gray-700 dark:text-gray-300 text-sm">+1 (555) 123-4567</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <Icon name="Mail" size={16} className="text-primary flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">support@medibookpro.com</span>
+                    <span className="text-gray-700 dark:text-gray-300 text-sm">support@medibookpro.com</span>
                   </li>
                 </ul>
               </div>
             </div>
 
             {/* Bottom Section */}
-            <div className="border-t border-white/10 mt-12 pt-8">
+            <div className="border-t border-gray-200 dark:border-white/10 mt-12 pt-8">
               <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                <div className="text-gray-300 text-sm">
+                <div className="text-gray-700 dark:text-gray-300 text-sm">
                   © {currentYear} MediBook Pro. All rights reserved.
                 </div>
                 <div className="flex items-center space-x-6 text-sm">
-                  <a href="#" className="text-gray-300 hover:text-white transition-smooth">
+                  <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-primary transition-smooth">
                     Privacy Policy
                   </a>
-                  <a href="#" className="text-gray-300 hover:text-white transition-smooth">
+                  <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-primary transition-smooth">
                     Terms of Service
                   </a>
-                  <a href="#" className="text-gray-300 hover:text-white transition-smooth">
+                  <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-primary transition-smooth">
                     HIPAA Compliance
                   </a>
                 </div>
