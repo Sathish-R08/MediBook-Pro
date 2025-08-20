@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #FAFBFC; /* gray-50 */
+    --color-foreground: #1F2937; /* gray-800 */
+    --color-border: #E5E7EB; /* gray-200 */
+    --color-input: #FFFFFF; /* white */
+    --color-ring: #2563EB; /* blue-600 */
+    
+    /* Card Colors */
+    --color-card: #FFFFFF; /* white */
+    --color-card-foreground: #1F2937; /* gray-800 */
+    
+    /* Popover Colors */
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #1F2937; /* gray-800 */
+    
+    /* Muted Colors */
+    --color-muted: #F9FAFB; /* gray-50 */
+    --color-muted-foreground: #6B7280; /* gray-500 */
+    
+    /* Primary Colors */
+    --color-primary: #2563EB; /* blue-600 */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #059669; /* emerald-600 */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #7C3AED; /* violet-600 */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* State Colors */
+    --color-success: #10B981; /* emerald-500 */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    --color-warning: #F59E0B; /* amber-500 */
+    --color-warning-foreground: #FFFFFF; /* white */
+    
+    --color-error: #EF4444; /* red-500 */
+    --color-error-foreground: #FFFFFF; /* white */
+    
+    --color-destructive: #EF4444; /* red-500 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Text Colors */
+    --color-text-primary: #1F2937; /* gray-800 */
+    --color-text-secondary: #6B7280; /* gray-500 */
+    
+    /* Surface Colors */
+    --color-surface: #FFFFFF; /* white */
+    
+    /* Shadow Variables */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    
+    /* Border Radius */
+    --radius: 8px;
+  }
+
+  .dark {
+    /* Core Colors - Dark Mode */
+    --color-background: #0F172A; /* slate-900 */
+    --color-foreground: #F1F5F9; /* slate-100 */
+    --color-border: #334155; /* slate-700 */
+    --color-input: #1E293B; /* slate-800 */
+    --color-ring: #3B82F6; /* blue-500 */
+    
+    /* Card Colors - Dark Mode */
+    --color-card: #1E293B; /* slate-800 */
+    --color-card-foreground: #F1F5F9; /* slate-100 */
+    
+    /* Popover Colors - Dark Mode */
+    --color-popover: #1E293B; /* slate-800 */
+    --color-popover-foreground: #F1F5F9; /* slate-100 */
+    
+    /* Muted Colors - Dark Mode */
+    --color-muted: #1E293B; /* slate-800 */
+    --color-muted-foreground: #94A3B8; /* slate-400 */
+    
+    /* Primary Colors - Dark Mode */
+    --color-primary: #3B82F6; /* blue-500 */
+    --color-primary-foreground: #1E293B; /* slate-800 */
+    
+    /* Secondary Colors - Dark Mode */
+    --color-secondary: #10B981; /* emerald-500 */
+    --color-secondary-foreground: #1E293B; /* slate-800 */
+    
+    /* Accent Colors - Dark Mode */
+    --color-accent: #8B5CF6; /* violet-500 */
+    --color-accent-foreground: #1E293B; /* slate-800 */
+    
+    /* State Colors - Dark Mode */
+    --color-success: #10B981; /* emerald-500 */
+    --color-success-foreground: #1E293B; /* slate-800 */
+    
+    --color-warning: #F59E0B; /* amber-500 */
+    --color-warning-foreground: #1E293B; /* slate-800 */
+    
+    --color-error: #EF4444; /* red-500 */
+    --color-error-foreground: #1E293B; /* slate-800 */
+    
+    --color-destructive: #EF4444; /* red-500 */
+    --color-destructive-foreground: #1E293B; /* slate-800 */
+    
+    /* Text Colors - Dark Mode */
+    --color-text-primary: #F1F5F9; /* slate-100 */
+    --color-text-secondary: #94A3B8; /* slate-400 */
+    
+    /* Surface Colors - Dark Mode */
+    --color-surface: #1E293B; /* slate-800 */
+    
+    /* Shadow Variables - Dark Mode */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Typography Base Styles */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-inter font-medium tracking-tight;
+  }
+  
+  .font-data {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  /* Animation Classes */
+  .animate-breathing {
+    animation: breathing 2s ease-in-out infinite;
+  }
+  
+  @keyframes breathing {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+  }
+  
+  /* Transition Classes */
+  .transition-smooth {
+    transition: all 150ms ease-out;
+  }
+  
+  .transition-modal {
+    transition: all 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  
+  /* Shadow Utilities */
+  .shadow-card {
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .shadow-modal {
+    box-shadow: var(--shadow-md);
+  }
+  
+  .shadow-floating {
+    box-shadow: var(--shadow-lg);
+  }
+  
+  /* Medical UI Patterns */
+  .medical-card {
+    @apply bg-card border border-border rounded-lg shadow-card transition-smooth;
+  }
+  
+  .medical-card:hover {
+    @apply shadow-modal transform scale-[1.02];
+  }
+  
+  /* Trust Building Elements */
+  .trust-indicator {
+    @apply inline-flex items-center gap-2 text-sm text-muted-foreground;
+  }
+  
+  /* Professional Spacing */
+  .section-spacing {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .content-spacing {
+    @apply space-y-6;
+  }
+}
+
+@layer utilities {
+  /* Focus Styles for Accessibility */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+  }
+  
+  /* Dark mode focus ring offset */
+  .dark .focus-ring {
+    @apply focus:ring-offset-background;
+  }
+  
+  /* Touch Target Utilities */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  /* Medical Typography */
+  .text-medical-primary {
+    color: var(--color-text-primary);
+  }
+  
+  .text-medical-secondary {
+    color: var(--color-text-secondary);
+  }
+  
+  /* Healthcare Specific Utilities */
+  .appointment-time {
+    @apply font-data text-sm tabular-nums;
+  }
+  
+  .medical-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  /* Loading States */
+  .skeleton {
+    @apply animate-pulse bg-muted rounded;
+  }
+  
+  .skeleton-text {
+    @apply skeleton h-4 w-full;
+  }
+  
+  .skeleton-avatar {
+    @apply skeleton h-10 w-10 rounded-full;
+  }
+}
+
+/* Z-Index Management */
+@layer base {
+  :root {
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+    --z-toast: 1080;
+  }
+  
+  .z-dropdown { z-index: var(--z-dropdown); }
+  .z-sticky { z-index: var(--z-sticky); }
+  .z-fixed { z-index: var(--z-fixed); }
+  .z-modal-backdrop { z-index: var(--z-modal-backdrop); }
+  .z-modal { z-index: var(--z-modal); }
+  .z-popover { z-index: var(--z-popover); }
+  .z-tooltip { z-index: var(--z-tooltip); }
+  .z-toast { z-index: var(--z-toast); }
+}
+
+/* Custom scroll bar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted-foreground);
+}
